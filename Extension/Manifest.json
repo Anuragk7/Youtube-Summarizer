@@ -1,0 +1,36 @@
+{
+    "name": "Youtube Summarizer",
+    "version": "1.0",
+    "description": "Provides a Summary for the Youtube Videos",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "tabs"
+      ],
+      
+      "host_permissions": ["https://*.youtube.com/*"],
+      "background": {
+        "service-worker": ["background.js"]
+      },
+      "content_scripts": [
+        {
+          "matches": ["https://*.youtube.com/*"],
+          "js": ["content.js"]
+        }
+      ],
+   
+    "action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    
+    "manifest_url": "https://example.com/manifest.json",
+    "web_accessible_resources": [
+        {
+            "resources": []
+        }
+    ],
+    "manifest_version":3
+    
+  }
+  
